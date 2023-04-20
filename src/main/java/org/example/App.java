@@ -3,10 +3,6 @@ package org.example;
 import config.Config;
 import model.Comment;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import proxies.CommentNotificationProxy;
-import proxies.EmailCommentNotification;
-import repositories.CommentRepository;
-import repositories.DBCommentRepository;
 import services.CommentService;
 
 public class App {
