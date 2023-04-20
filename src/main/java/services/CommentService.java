@@ -1,20 +1,20 @@
 package services;
 
 import model.Comment;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import proxies.CommentNotificationProxy;
 import repositories.CommentRepository;
 
-@Component
+@Service
 public class CommentService {
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
 
     public CommentService(
-            @Autowired
             CommentRepository commentRepository,
-            @Autowired
+            @Qualifier("EMAIL")
             CommentNotificationProxy commentNotificationProxy
     ) {
         this.commentRepository = commentRepository;

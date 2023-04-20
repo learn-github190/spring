@@ -1,4 +1,4 @@
-package proxies;
+package proxiess;
 
 import model.Comment;
 
